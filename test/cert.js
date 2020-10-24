@@ -29,10 +29,40 @@ describe('Sign/Verify 시험', () => {
   });
 
   it('올바르지 않은 Access Key 생성', () => {
+    let ret = false;
 
+    try {
+      // Access Key 생성 에러를 위해 환형 구조 생성
+      const info = {
+        a: {
+          a: 1,
+          b: null,
+        },
+      };
+      info.a.b = info.a;
+
+      cert.sign('test', info);
+    } catch (error) {
+      ret = true;
+    }
+
+    expect(ret).to.equal(true);
   });
 
   it('올바르지 않은 Access Key 인증', () => {
+    let ret = false;
 
+    try {
+      let accessKey = cert.sign('test', {});
+
+      // 임의로 Key 값 변경
+      accessKey = accessKey.replace('a', 'b');
+
+      cert.verify(accessKey);
+    } catch (error) {
+      ret = true;
+    }
+
+    expect(ret).to.equal(true);
   });
 });

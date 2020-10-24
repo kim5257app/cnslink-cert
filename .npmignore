@@ -8,3 +8,6 @@ coverage/
 tsconfig.json
 yarn.lock
 .idea
+.nyc_output/
+example/
+
