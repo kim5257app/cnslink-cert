@@ -1,0 +1,40 @@
+{
+  "name": "@kim5257/cnslink-cert",
+  "version": "0.0.1",
+  "description": "씨앤에스 링크 사용자 인증 모듈",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --reporter spec",
+    "cover": "nyc node_modules/mocha/bin/_mocha test/*.js -- -R spec",
+    "coveralls": "yarn cover --report lcovonly && type .\\coverage\\lcov.info | coveralls",
+    "example01": "node ./example/example01.js",
+    "example02": "node ./example/example02.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://kim5257.iptime.org/kim5257/cnslink-cert.git"
+  },
+  "author": "Jaegu Kim",
+  "license": "MIT",
+  "publishConfig": {
+    "@kim5257:registry": "http://kim5257.iptime.org/api/v4/projects/7/packages/npm/"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "mocha": "^8.1.3",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.1.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@kim5257/js-error": "^0.0.4",
+    "anyid": "^1.0.7",
+    "debug": "^4.2.0"
+  }
+}
