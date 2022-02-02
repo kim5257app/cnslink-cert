@@ -20,6 +20,8 @@ describe('Sign/Verify 시험', () => {
 
     const accessKey = cert.sign(payload.id, payload.info);
 
+    console.log('accessKey', accessKey);
+
     const verifyInfo = cert.verify(accessKey);
 
     ret = ret && (verifyInfo.id != null);

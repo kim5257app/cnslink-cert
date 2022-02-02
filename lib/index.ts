@@ -1,4 +1,4 @@
-import Error from '@kim5257/js-error';
+import Error from '@kim5257app/js-error';
 import * as jwt from 'jsonwebtoken';
 import * as aes from 'aes-js';
 
