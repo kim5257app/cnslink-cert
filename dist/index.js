@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const js_error_1 = require("@kim5257/js-error");
+const js_error_1 = require("@kim5257app/js-error");
 const jwt = require("jsonwebtoken");
 const aes = require("aes-js");
 class Cert {

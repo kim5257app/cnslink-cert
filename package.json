@@ -1,5 +1,5 @@
 {
-  "name": "@kim5257/cnslink-cert",
+  "name": "@kim5257app/cnslink-cert",
   "version": "0.0.1",
   "description": "씨앤에스 링크 사용자 인증 모듈",
   "main": "dist/index.js",
